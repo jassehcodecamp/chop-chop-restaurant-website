@@ -11,17 +11,53 @@
     <title>Chop Chop</title>
   </head>
   <body class="bg-surface font-sans text-ink-2">
-    <header class="border-b border-line">
+    <header
+      class="sticky top-0 z-30 border-b border-line bg-surface sm:static"
+    >
       <div
-        class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-4 sm:flex-row sm:items-center sm:justify-between"
+        class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4"
       >
         <a href="#" class="flex items-center gap-2 text-lg font-semibold text-ink">
           <img src="/assets/logo.svg" alt="" class="h-8 w-8" />
           Chop Chop
         </a>
-        <div
-          class="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6"
+        <button
+          type="button"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-line text-ink transition duration-200 hover:-translate-y-0.5 hover:border-chop focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-chop sm:hidden"
+          aria-expanded="false"
+          aria-controls="menu-drawer"
+          aria-label="Open menu"
+          data-toggle
         >
+          <svg
+            class="h-5 w-5"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+            data-icon-open
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+          </svg>
+          <svg
+            class="hidden h-5 w-5"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+            data-icon-close
+            hidden
+          >
+            <path d="M6 6l12 12M18 6L6 18" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="hidden sm:flex sm:items-center sm:gap-6">
           <nav class="flex flex-wrap gap-x-6 gap-y-2" aria-label="Primary">
             <a
               href="#how-it-works"
@@ -47,6 +83,50 @@
         </div>
       </div>
     </header>
+    <div
+      id="menu-drawer"
+      class="fixed inset-x-0 bottom-0 top-[calc(4.75rem+1px)] z-20 hidden overflow-hidden sm:hidden"
+      data-menu
+      hidden
+    >
+      <button
+        type="button"
+        class="absolute inset-0 bg-ink/40"
+        aria-label="Close menu"
+        tabindex="-1"
+        data-scrim
+      ></button>
+      <div
+        class="absolute inset-y-0 right-0 flex w-72 max-w-full translate-x-full flex-col border-l border-line bg-surface transition duration-200"
+        data-panel
+      >
+        <nav
+          class="flex flex-col items-start gap-4 px-5 py-4"
+          aria-label="Primary"
+        >
+          <a
+            href="#how-it-works"
+            class="border-b-2 border-transparent text-sm text-ink-3 transition duration-200 hover:-translate-y-0.5 hover:border-chop hover:text-ink"
+            >How it works</a
+          >
+          <a
+            href="#popular"
+            class="border-b-2 border-transparent text-sm text-ink-3 transition duration-200 hover:-translate-y-0.5 hover:border-chop hover:text-ink"
+            >Popular</a
+          >
+          <a
+            href="#areas"
+            class="border-b-2 border-transparent text-sm text-ink-3 transition duration-200 hover:-translate-y-0.5 hover:border-chop hover:text-ink"
+            >Areas</a
+          >
+        </nav>
+        <a
+          href="#get-the-app"
+          class="mx-5 mb-5 mt-auto inline-flex w-fit rounded-lg bg-chop px-4 py-2 font-semibold text-on-dark transition duration-200 hover:-translate-y-0.5 hover:bg-chop-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-chop"
+          >Get the app</a
+        >
+      </div>
+    </div>
 
     <main>
       <section class="bg-cream py-16 lg:py-24">
@@ -105,7 +185,7 @@
         </div>
       </section>
 
-      <section id="how-it-works" class="py-20">
+      <section id="how-it-works" class="scroll-mt-[calc(4.75rem+1px)] py-20 sm:scroll-mt-0">
         <div class="mx-auto max-w-6xl px-5">
           <h2 class="text-3xl font-semibold tracking-tight text-ink">
             How it works
@@ -151,7 +231,7 @@
         </div>
       </section>
 
-      <section id="popular" class="bg-cream py-20">
+      <section id="popular" class="scroll-mt-[calc(4.75rem+1px)] bg-cream py-20 sm:scroll-mt-0">
         <div class="mx-auto max-w-6xl px-5">
           <h2 class="text-3xl font-semibold tracking-tight text-ink">
             Popular this week
@@ -346,7 +426,7 @@
         </div>
       </section>
 
-      <section id="areas" class="py-20">
+      <section id="areas" class="scroll-mt-[calc(4.75rem+1px)] py-20 sm:scroll-mt-0">
         <div class="mx-auto max-w-6xl px-5">
           <h2 class="text-3xl font-semibold tracking-tight text-ink">
             Where we deliver
@@ -396,7 +476,7 @@
         </div>
       </section>
 
-      <section id="get-the-app" class="bg-ink py-20">
+      <section id="get-the-app" class="scroll-mt-[calc(4.75rem+1px)] bg-ink py-20 sm:scroll-mt-0">
         <div class="mx-auto max-w-6xl px-5 text-center">
           <h2
             class="text-3xl font-semibold tracking-tight text-on-dark"
