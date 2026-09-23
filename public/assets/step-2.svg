@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="A bowl with a plus sign">
+  <circle cx="48" cy="48" r="48" fill="#ffedd5"/>
+  <path d="M22 48h52c0 12-9 22-20 24h-12c-11-2-20-12-20-24z" fill="#fff" stroke="#ea580c" stroke-width="3"/>
+  <rect x="20" y="44" width="56" height="6" rx="3" fill="#ea580c"/>
+  <circle cx="62" cy="30" r="12" fill="#ea580c"/>
+  <path d="M62 24v12M56 30h12" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+</svg>

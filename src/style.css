@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+  --color-chop: #ea580c;
+  --color-chop-dark: #c2410c;
+  --color-chop-light: #fb923c;
+  --color-chop-soft: #ffedd5;
+  --color-ink: #1c1917;
+  --color-ink-2: #44403c;
+  --color-ink-3: #78716c;
+  --color-surface: #ffffff;
+  --color-cream: #fdf4e7;
+  --color-line: #e7e5e4;
+  --color-leaf: #15803d;
+  --color-leaf-soft: #dcfce7;
+  --color-on-dark: #fafaf9;
+  --color-on-dark-soft: #a8a29e;
+  --color-dark-line: #44403c;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
